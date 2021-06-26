@@ -11,12 +11,7 @@ from app.utils import get_password_hash, verify_password
 from app.database import Base
 
 from app.models import User, Item
-from app.schemas import (
-    UserCreate,
-    UserUpdate,
-    ItemCreate,
-    ItemUpdate
-)
+from app.schemas import UserCreate, UserUpdate, ItemCreate, ItemUpdate
 
 
 ModelType = TypeVar("ModelType", bound=Base)
@@ -40,7 +35,13 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         return db.query(self.model).filter(self.model.id == id).first()
 
     def get_multi(
-        self, db: Session, *, after_field=None, after_value=None, skip: int = 0, limit: int = 100
+        self,
+        db: Session,
+        *,
+        after_field=None,
+        after_value=None,
+        skip: int = 0,
+        limit: int = 100,
     ) -> List[ModelType]:
         q = db.query(self.model)
         if after_field:
@@ -60,7 +61,11 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         return db_obj
 
     def update(
-        self, db: Session, *, db_obj: ModelType, obj_in: Union[UpdateSchemaType, Dict[str, Any]]
+        self,
+        db: Session,
+        *,
+        db_obj: ModelType,
+        obj_in: Union[UpdateSchemaType, Dict[str, Any]],
     ) -> ModelType:
         obj_data = jsonable_encoder(db_obj)
         if isinstance(obj_in, dict):
