@@ -4,6 +4,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import postcss from "rollup-plugin-postcss";
+import sveltePreprocess from 'svelte-preprocess';
 const smelte = require("smelte/rollup-plugin-smelte");
 
 const production = !process.env.ROLLUP_WATCH;
@@ -39,6 +41,7 @@ export default {
 	},
 	plugins: [
 		svelte({
+			preprocess: sveltePreprocess({ postcss: true }),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
@@ -97,7 +100,19 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+		// postcss({
+		// 	extract: true,
+		// 	minimize: true,
+		// 	use: [
+		// 		[
+		// 			"sass",
+		// 			{
+		// 				includePaths: ["./theme", "./node_modules"],
+		// 			},
+		// 		],
+		// 	],
+		// }),
 	],
 	watch: {
 		clearScreen: false

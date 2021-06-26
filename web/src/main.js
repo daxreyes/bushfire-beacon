@@ -1,4 +1,5 @@
 import "smelte/src/tailwind.css";
+import "leaflet/dist/leaflet.css";
 import App from './App.svelte';
 
 const app = new App({
