@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { LeafletMap, TileLayer } from "svelte-leafletjs";
-    import Button from "smelte/src/components/Button";
+    import { Spacer, AppBar, Tabs, Button } from "smelte";
     export let name;
 
     let map;
@@ -27,6 +27,15 @@
           &copy;<a href="https://carto.com/attributions" target="_blank">CARTO</a>`,
     };
 
+    const topMenu = [
+        { to: "/", text: "Home" },
+        { to: "/components", text: "Components" },
+        { to: "/typography", text: "Typography" },
+        { to: "/color", text: "Color" },
+    ];
+
+    $: path = document.location.pathname;
+
     function boundsCheck(e) {
         // alert(map.getMap().getBounds());
         console.log("bounds", map.getMap().getBounds());
@@ -41,7 +50,26 @@
     });
 </script>
 
-<main>
+<AppBar class={(i) => i.replace("primary-300", "dark-600")}>
+    <a href="." class="px-2 md:px-8 flex items-center">
+        <img src="/logo.svg" alt="Logo" width="44" />
+        <h6 class="pl-3 text-white tracking-widest font-thin text-lg">
+            SMELTE
+        </h6>
+    </a>
+    <Spacer />
+    <Tabs
+        navigation
+        class="bg-black shadow-sm mt-6 text-white rounded-t-lg"
+        items={topMenu}
+        bind:selected={path}
+    />
+</AppBar>
+
+<main
+    class="relative p-8 lg:max-w-3xl mx-auto mb-10 mt-24 md:ml-64 md:pl-16
+md:max-w-md md:px-3"
+>
     <h1>Hello {name}!</h1>
     <Button>test</Button>
     <p>
