@@ -46,7 +46,7 @@
         if (map) {
             console.log("map bounds and invalidate size");
             console.log("bounds", map.getMap().getBounds());
-            // map.getMap().invalidateSize();
+            map.getMap().invalidateSize();
         }
     });
 </script>
@@ -67,8 +67,7 @@
 </AppBar>
 
 <main
-    class="relative p-8 lg:max-w-3xl mx-auto mb-10 mt-24 md:ml-64 md:pl-16
-md:max-w-md md:px-3"
+    class="relative lg:max-w-3xl mx-auto mb-10 mt-24 md:max-w-md md:px-3"
 >
     <h1>Hello {name}!</h1>
     <Dialog persistent bind:value={showDialog2}>
@@ -84,10 +83,8 @@ md:max-w-md md:px-3"
         Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
         how to build Svelte apps.
     </p>
-</main>
-
-<h1>Leaflet</h1>
-<div class="leaflet-map" style="width: 100%; height: 90%;">
+    <h1>Leaflet</h1>
+<div class="mt-24" style="height: 300px;">
     <LeafletMap
         options={mapOptions}
         bind:this={map}
@@ -97,6 +94,9 @@ md:max-w-md md:px-3"
         <TileLayer url={tileUrl} options={tileLayerOptions} />
     </LeafletMap>
 </div>
+
+</main>
+
 
 <style>
     main {
