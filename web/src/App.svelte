@@ -1,10 +1,11 @@
 <script>
     import { onMount } from "svelte";
     import { LeafletMap, TileLayer } from "svelte-leafletjs";
-    import { Spacer, AppBar, Tabs, Button, Icon } from "smelte";
+    import { Spacer, AppBar, Tabs, Button, Icon, Dialog } from "smelte";
     export let name;
 
     let map;
+    let showDialog2 = false;
 
     const mapOptions = {
         center: [14.6419083, 121.04793075343855],
@@ -70,7 +71,15 @@
 md:max-w-md md:px-3"
 >
     <h1>Hello {name}!</h1>
-    <Button>test</Button>
+    <Dialog persistent bind:value={showDialog2}>
+        <h5 slot="title">Do you think you can close me by clicking outside?</h5>
+        <div class="text-gray-700 dark:text-gray-100">Doubt it.</div>
+        <div slot="actions">
+          <Button text on:click={() => (showDialog2 = false)}>Yes</Button>
+          <Button text on:click={() => (showDialog2 = false)}>No</Button>
+        </div>
+      </Dialog>
+    <Button on:click={() => (showDialog2 = true)}>test</Button>
     <p>
         Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
         how to build Svelte apps.
