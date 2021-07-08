@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { LeafletMap, TileLayer } from "svelte-leafletjs";
-    import { Spacer, AppBar, Tabs, Button } from "smelte";
+    import { Spacer, AppBar, Tabs, Button, Icon } from "smelte";
     export let name;
 
     let map;
@@ -50,19 +50,18 @@
     });
 </script>
 
-<AppBar class={(i) => i.replace("primary-300", "dark-600")}>
+<AppBar  class={i => i.replace('primary-300', 'dark-600')}>
     <a href="." class="px-2 md:px-8 flex items-center">
-        <img src="/logo.svg" alt="Logo" width="44" />
+        <!-- https://freesvg.org/fire-1 -->
+        <img src="/fire1.svg" alt="fire logo" width="44" />
         <h6 class="pl-3 text-white tracking-widest font-thin text-lg">
-            SMELTE
+            BEACON
         </h6>
     </a>
     <Spacer />
     <Tabs
         navigation
-        class="bg-black shadow-sm mt-6 text-white rounded-t-lg"
         items={topMenu}
-        bind:selected={path}
     />
 </AppBar>
 
