@@ -94,7 +94,6 @@ md:max-w-md md:px-3"
         text-align: center;
         padding: 1em;
         max-width: 240px;
-        margin: 0 auto;
     }
 
     h1 {
