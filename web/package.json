@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",
-    "smelte": "^1.1.5"
+    "smelte": "^1.1.6"
   }
 }

@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { LeafletMap, TileLayer } from "svelte-leafletjs";
-    import { Spacer, AppBar, Tabs, Button, Icon, Dialog } from "smelte";
+    import { Spacer, AppBar, Tabs, Tab, Button, Icon, Dialog, TextField } from "smelte";
     export let name;
 
     let map;
@@ -78,7 +78,10 @@
           <Button text on:click={() => (showDialog2 = false)}>No</Button>
         </div>
       </Dialog>
-    <Button on:click={() => (showDialog2 = true)}>test</Button>
+    <Button color="alert" on:click={() => (showDialog2 = true)}>Show modal</Button>
+    <TextField label="Number only" prepend="search" outlined type="number" min="10" max="100" />
+    <TextField label="Label" prepend="whatshot" outlined />
+    <TextField prepend="file_upload" outlined type="file" />
     <p>
         Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
         how to build Svelte apps.

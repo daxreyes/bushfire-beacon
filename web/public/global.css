@@ -18,6 +18,8 @@ button,select{text-transform:none}
 
 progress{vertical-align:baseline}
 
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+
 h1,h5,h6,p{margin:0}
 
 button{background-color:transparent;background-image:none}
@@ -236,6 +238,8 @@ img{max-width:100%;height:auto}
 
 .overflow-y-auto{overflow-y:auto}
 
+.whitespace-nowrap{white-space:nowrap}
+
 .rounded{border-radius:.25rem}
 
 .rounded-full{border-radius:9999px}
@@ -271,6 +275,12 @@ img{max-width:100%;height:auto}
 .border-primary-800{--tw-border-opacity:1;border-color:rgba(151,23,151,var(--tw-border-opacity))}
 
 .border-error-500{--tw-border-opacity:1;border-color:rgba(244,67,54,var(--tw-border-opacity))}
+
+.border-alert-200{--tw-border-opacity:1;border-color:rgba(255,204,128,var(--tw-border-opacity))}
+
+.border-alert-400{--tw-border-opacity:1;border-color:rgba(255,167,38,var(--tw-border-opacity))}
+
+.border-alert-800{--tw-border-opacity:1;border-color:rgba(255,123,0,var(--tw-border-opacity))}
 
 .border-gray-200{--tw-border-opacity:1;border-color:rgba(238,238,238,var(--tw-border-opacity))}
 
@@ -318,6 +328,24 @@ img{max-width:100%;height:auto}
 
 .bg-error-500{--tw-bg-opacity:1;background-color:rgba(244,67,54,var(--tw-bg-opacity))}
 
+.bg-alert-50{--tw-bg-opacity:1;background-color:rgba(255,224,179,var(--tw-bg-opacity))}
+
+.bg-alert-300{--tw-bg-opacity:1;background-color:rgba(255,183,77,var(--tw-bg-opacity))}
+
+.bg-alert-400{--tw-bg-opacity:1;background-color:rgba(255,167,38,var(--tw-bg-opacity))}
+
+.bg-alert-500{--tw-bg-opacity:1;background-color:rgba(255,152,0,var(--tw-bg-opacity))}
+
+.bg-alert-800{--tw-bg-opacity:1;background-color:rgba(255,123,0,var(--tw-bg-opacity))}
+
+.bg-alert-900{--tw-bg-opacity:1;background-color:rgba(255,106,0,var(--tw-bg-opacity))}
+
+.bg-alert-transLight{background-color:rgba(255,224,179,.15)}
+
+.bg-alert-trans{background-color:rgba(255,224,179,.7)}
+
+.bg-alert-transDark{background-color:rgba(255,152,0,.15)}
+
 .bg-gray-50{--tw-bg-opacity:1;background-color:rgba(250,250,250,var(--tw-bg-opacity))}
 
 .bg-gray-100{--tw-bg-opacity:1;background-color:rgba(245,245,245,var(--tw-bg-opacity))}
@@ -362,6 +390,8 @@ img{max-width:100%;height:auto}
 
 .mode-dark .dark-hover\:bg-primary-transDark:hover{background-color:rgba(176,39,176,.15)}
 
+.mode-dark .dark-hover\:bg-alert-transDark:hover{background-color:rgba(255,152,0,.15)}
+
 .mode-dark .dark-hover\:bg-dark-400:hover{--tw-bg-opacity:1;background-color:rgba(66,66,66,var(--tw-bg-opacity))}
 
 .mode-dark .dark-hover\:bg-gray-transDark:hover{background-color:hsla(0,0%,39.2%,.2)}
@@ -377,6 +407,12 @@ img{max-width:100%;height:auto}
 .hover\:bg-primary-trans:hover{background-color:rgba(231,190,231,.7)}
 
 .hover\:bg-primary-transDark:hover{background-color:rgba(176,39,176,.15)}
+
+.hover\:bg-alert-400:hover{--tw-bg-opacity:1;background-color:rgba(255,167,38,var(--tw-bg-opacity))}
+
+.hover\:bg-alert-transLight:hover{background-color:rgba(255,224,179,.15)}
+
+.hover\:bg-alert-trans:hover{background-color:rgba(255,224,179,.7)}
 
 .hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgba(250,250,250,var(--tw-bg-opacity))}
 
@@ -498,6 +534,16 @@ img{max-width:100%;height:auto}
 
 .text-error-500{--tw-text-opacity:1;color:rgba(244,67,54,var(--tw-text-opacity))}
 
+.text-alert-300{--tw-text-opacity:1;color:rgba(255,183,77,var(--tw-text-opacity))}
+
+.text-alert-400{--tw-text-opacity:1;color:rgba(255,167,38,var(--tw-text-opacity))}
+
+.text-alert-500{--tw-text-opacity:1;color:rgba(255,152,0,var(--tw-text-opacity))}
+
+.text-alert-800{--tw-text-opacity:1;color:rgba(255,123,0,var(--tw-text-opacity))}
+
+.text-alert-900{--tw-text-opacity:1;color:rgba(255,106,0,var(--tw-text-opacity))}
+
 .text-gray-50{--tw-text-opacity:1;color:rgba(250,250,250,var(--tw-text-opacity))}
 
 .text-gray-200{--tw-text-opacity:1;color:rgba(238,238,238,var(--tw-text-opacity))}
@@ -575,6 +621,8 @@ button:focus,div:focus,input:focus,li:focus,textarea:focus{outline:none}
 .a{--tw-text-opacity:1;color:rgba(29,142,241,var(--tw-text-opacity));text-decoration:underline}
 
 html{font-family:Roboto,sans-serif}
+
+input[type=number]{-moz-appearance:textfield}
 
 input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
 
