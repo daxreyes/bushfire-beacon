@@ -6,6 +6,8 @@ html{-moz-tab-size:4;tab-size:4;line-height:1.15;-webkit-text-size-adjust:100%}
 
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji}
 
+code{font-family:ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em}
+
 small{font-size:80%}
 
 table{text-indent:0;border-color:inherit}
@@ -50,6 +52,8 @@ a{color:inherit;text-decoration:inherit}
 
 button,input,select,textarea{padding:0;line-height:inherit;color:inherit}
 
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}
+
 img,object,svg{display:block;vertical-align:middle}
 
 img{max-width:100%;height:auto}
@@ -75,6 +79,8 @@ img{max-width:100%;height:auto}
 .pointer-events-auto{pointer-events:auto}
 
 .visible{visibility:visible}
+
+.static{position:static}
 
 .fixed{position:fixed}
 
@@ -617,6 +623,8 @@ img{max-width:100%;height:auto}
 .button{letter-spacing:.0892857143em}
 
 button:focus,div:focus,input:focus,li:focus,textarea:focus{outline:none}
+
+.list{margin-top:2px}
 
 .a{--tw-text-opacity:1;color:rgba(29,142,241,var(--tw-text-opacity));text-decoration:underline}
 
