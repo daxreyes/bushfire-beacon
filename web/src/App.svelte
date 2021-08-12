@@ -1,10 +1,13 @@
 <script>
     import Router from "svelte-spa-router";
     import { location } from "svelte-spa-router";
+    import { wrap } from 'svelte-spa-router/wrap'
     import { Spacer, AppBar, Tabs, Tab, Button, Icon, Dialog, TextField } from "smelte";
 
     import Home from "./Home.svelte";
     import Route1 from "./Route1.svelte";
+
+    export let name;
 
 
     const topMenu = [
@@ -14,7 +17,11 @@
     ];
 
     const routes = {
-    "/": Home,
+    "/": wrap({
+        'component': Home,
+        'props':{
+            'name': name
+        }}),
     "/route1": Route1,
     }
 

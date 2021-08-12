@@ -4,6 +4,7 @@
     import { LeafletMap, TileLayer } from "svelte-leafletjs";
     import { Button, Icon, Dialog, TextField } from "smelte";
 
+    export  let name;
 
     let map;
     let showDialog2 = false;
@@ -46,7 +47,7 @@
 <main
 class="relative lg:max-w-3xl mx-auto mb-10 mt-24 md:max-w-md md:px-3"
 >
-<h1>Hello!</h1>
+<h1>Hello {name}!</h1>
 <Dialog persistent bind:value={showDialog2}>
     <h5 slot="title">Do you think you can close me by clicking outside?</h5>
     <div class="text-gray-700 dark:text-gray-100">Doubt it.</div>
