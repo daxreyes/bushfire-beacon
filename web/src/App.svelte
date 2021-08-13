@@ -1,8 +1,7 @@
 <script>
     import Router from "svelte-spa-router";
-    import { location } from "svelte-spa-router";
     import { wrap } from 'svelte-spa-router/wrap'
-    import { Spacer, AppBar, Tabs, Tab, Button, Icon, Dialog, TextField } from "smelte";
+    import { Spacer, AppBar, Tabs } from "smelte";
 
     import Home from "./Home.svelte";
     import Route1 from "./Route1.svelte";
