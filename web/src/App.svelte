@@ -5,6 +5,8 @@
 
     import Home from "./Home.svelte";
     import Route1 from "./Route1.svelte";
+    import Upload from "./Upload.svelte";
+
 
     export let name;
 
@@ -12,7 +14,7 @@
     const topMenu = [
         { to: "#/", text: "Home" },
         { to: "#/route1", text: "Route1" },
-        // { to: "/route2", text: "Route2" },
+        { to: "#/upload", text: "Upload" },
     ];
 
     const routes = {
@@ -22,6 +24,7 @@
             'name': name
         }}),
     "/route1": Route1,
+    "/upload": Upload,
     }
 
     $: path = document.location.pathname;
