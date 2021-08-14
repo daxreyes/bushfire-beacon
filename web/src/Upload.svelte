@@ -30,7 +30,7 @@
 
 
 <FilePond bind:this={pond} {name}
-    server="/api/v1/upload"
+    server="/api/v1/upload/"
     credits=""
     allowMultiple={true}
     instantUpload={false}

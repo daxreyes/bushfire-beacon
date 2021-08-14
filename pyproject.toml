@@ -16,6 +16,7 @@ SQLAlchemy-Utils = "^0.37.7"
 passlib = "^1.7.4"
 emails = "^0.6"
 phonenumbers = "^8.12.25"
+python-multipart = "^0.0.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
