@@ -6,6 +6,7 @@
     import Home from "./Home.svelte";
     import Route1 from "./Route1.svelte";
     import Upload from "./Upload.svelte";
+    import Charts from "./Charts.svelte";
 
 
     export let name;
@@ -15,6 +16,7 @@
         { to: "#/", text: "Home" },
         { to: "#/route1", text: "Route1" },
         { to: "#/upload", text: "Upload" },
+        { to: "#/charts", text: "Charts" },
     ];
 
     const routes = {
@@ -25,11 +27,25 @@
         }}),
     "/route1": Route1,
     "/upload": Upload,
+    "/charts": Charts,
     }
 
     $: path = document.location.pathname;
 
 </script>
+
+<svelte:head>
+    <link
+            rel="preconnect"
+            crossorigin="anonymous"
+            href="https://fonts.gstatic.com"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400%7CIBM+Plex+Sans:400,600&display=swap"
+            rel="stylesheet"
+            crossorigin="anonymous"
+    />
+</svelte:head>
 
 <AppBar  class={i => i.replace('primary-300', 'dark-600')}>
     <a href="." class="px-2 md:px-8 flex items-center">
