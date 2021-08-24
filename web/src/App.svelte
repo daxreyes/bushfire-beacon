@@ -7,7 +7,7 @@
     import Route1 from "./Route1.svelte";
     import Upload from "./Upload.svelte";
     import Charts from "./Charts.svelte";
-
+    import VegaCharts from "./VegaCharts.svelte";
 
     export let name;
 
@@ -17,6 +17,7 @@
         { to: "#/route1", text: "Route1" },
         { to: "#/upload", text: "Upload" },
         { to: "#/charts", text: "Charts" },
+        { to: "#/vega", text: "Vega" },
     ];
 
     const routes = {
@@ -28,6 +29,7 @@
     "/route1": Route1,
     "/upload": Upload,
     "/charts": Charts,
+    "/vega": VegaCharts,
     }
 
     $: path = document.location.pathname;
