@@ -7,12 +7,13 @@
     "start": "sirv public"
   },
   "devDependencies": {
-    "@carbon/charts-svelte": "^0.42.1",
+    "@carbon/charts-svelte": "^0.45.1",
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
-    "d3": "^7.0.0",
+    "d3": "^7.0.1",
     "filepond": "^4.28.2",
     "filepond-plugin-image-exif-orientation": "^1.0.11",
     "filepond-plugin-image-preview": "^4.6.7",
@@ -26,7 +27,10 @@
     "svelte-filepond": "^0.2.0",
     "svelte-leafletjs": "^0.6.1",
     "svelte-preprocess": "^4.7.3",
-    "svelte-waypoint": "^0.1.4"
+    "svelte-vega": "^1.1.0",
+    "svelte-waypoint": "^0.1.4",
+    "vega": "^5.20.2",
+    "vega-lite": "^5.1.0"
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",
