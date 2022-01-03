@@ -22,6 +22,27 @@ python-multipart = "^0.0.5"
 pytest = "^6.2.4"
 pytest-cov = "^2.12.1"
 black = {version = "^21.6b0", allow-prereleases = true}
+pre-commit = "^2.16.0"
+flake8 = "^4.0.1"
+bandit = "^1.7.1"
+isort = "^5.10.1"
+bumpversion = "^0.6.0"
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''
+
+[tool.isort]
+profile = "black"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
